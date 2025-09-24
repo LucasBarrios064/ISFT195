@@ -29,7 +29,7 @@ nav{
     background-color:#1E3A8A;
     position:sticky ;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -39,7 +39,6 @@ footer{
     height: 19vh;
     color: #dceaf9;
     padding: 5%;
-    padding-bottom: 0%;
 }
 footer ul{
     margin-top: 10%;
@@ -52,6 +51,10 @@ footer ul{
 footer ul li{
     padding: 2px;
     margin: 2px;
+    margin-top: 0px;
+}
+.email{
+    font-size: 120%;
 }
 i{
     color:#f9fafb ;
@@ -68,17 +71,36 @@ footer h2{
 }
 
 
-.container-logo{
+.container-logo {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    object-fit: contain;
+    overflow: hidden; /* evita desbordes del blur */
+    margin-bottom: 30px;
 }
-.container-logo img{
+
+.container-logo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(edificio-del-reactor-atucha-G6JIFZTU6NAVNHCS5HMT3BJKS4.avif);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: 0; /* queda detrás */
+}
+
+.container-logo img {
+    
+    position: relative;
+    z-index: 1; /* logo por encima */
     width: 80%;
     object-fit: cover;
+    filter: drop-shadow(3px 3px 2px rgb(255, 255, 255));
 }
+
 
 .container-ubicacion{
     text-align: center;
