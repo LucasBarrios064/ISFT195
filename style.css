@@ -89,16 +89,21 @@ footer h2{
     background-size: cover;
     background-position: center;
     filter: blur(2px);
-    z-index: 0; /* queda detrás */
+    z-index: 0; 
 }
 
 .container-logo img {
     
     position: relative;
-    z-index: 1; /* logo por encima */
+    z-index: 1;
     width: 80%;
     object-fit: cover;
-    filter: drop-shadow(3px 3px 2px rgb(255, 255, 255));
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    margin: 10%;
+    border: 3px rgb(255, 255, 255) solid;
+    outline: turquoise 3px solid;
 }
 
 
